@@ -81,7 +81,7 @@ A prohlížeč vypíše menšítko.
 **Velmi důležité je rozlišovat kontext, ve kterém data vypisujeme**. Protože v různých kontextech se řetězce různě sanitizují. V různých kontextech mají speciální význam různé znaky.
 Například se liší escapování v textu HTML, v atributech HTML, uvnitř některých speciálních elementů, atd. Za chvíli to probereme podrobně.
 
-Ošetření je nejlepší provádět přímo při vypsáním řetězce ve stránce, čímž zajistíme, že se opravdu provede a provede se právě jednou. Nejlepší je, pokud ošetření obstará **automaticky** přímo šablonovací systém.
+Ošetření je nejlepší provádět přímo při vypsání řetězce ve stránce, čímž zajistíme, že se opravdu provede a provede se právě jednou. Nejlepší je, pokud ošetření obstará **automaticky** přímo šablonovací systém.
 Protože pokud ošetření neprobíhá automaticky, může na něj programátor zapomenout. A jedno opomenutí znamená, že web je zranitelný.
 
 Nicméně XSS se netýká jen vypisování dat v šablonách, ale i dalších částí aplikace, které musí správně zacházet s nedůvěryhodnými daty. Například je nutné, aby JavaScript ve vaší aplikaci nepoužíval ve spojitosti s nimi `innerHTML`, ale pouze `innerText` nebo `textContent`.
